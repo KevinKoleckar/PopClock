@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/hr_min_seperator" />
+        android:text="@string/hr_min_separator" />
 
     <TextView
         android:id="@+id/delimLabel"
@@ -30,7 +30,7 @@
         android:gravity="center_horizontal"
         android:labelFor="@+id/delimText"
         android:paddingTop="20dp"
-        android:text="@string/text_that_seperates_hr_min"
+        android:text="@string/text_that_separates_hr_min"
         android:visibility="gone" />
 
     <EditText

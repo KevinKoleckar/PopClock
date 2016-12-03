@@ -37,17 +37,17 @@ class MyTimer {
     }
 
     private static String loadDelimPref(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences("com.example.kkoleckar.girlyclock.MyAppWidgetProvider", 4);
-        String delim = prefs.getString("delimeter", null);
+        SharedPreferences prefs = context.getSharedPreferences("com.koleckar.popclock.MyAppWidgetProvider", 4);
+        String delim = prefs.getString("delimiter", null);
         if (delim != null) {
             return delim;
         } else {
-            return context.getString(R.string.delimeter);
+            return context.getString(R.string.delimiter);
         }
     }
 
     private static String loadColorPref(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences("com.example.kkoleckar.girlyclock.MyAppWidgetProvider", 4);
+        SharedPreferences prefs = context.getSharedPreferences("com.koleckar.popclock.MyAppWidgetProvider", 4);
         String color = prefs.getString("color", null);
         if (color != null) {
             return color;
@@ -57,7 +57,7 @@ class MyTimer {
     }
 
     private static String loadSizePref(Context context) {
-        SharedPreferences prefs = context.getSharedPreferences("com.example.kkoleckar.girlyclock.MyAppWidgetProvider", 4);
+        SharedPreferences prefs = context.getSharedPreferences("com.koleckar.popclock.MyAppWidgetProvider", 4);
         String size = prefs.getString("size", null);
         if (size != null) {
             return size;

@@ -30,8 +30,8 @@ public class SettingsPage extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_page);
         getIdOfCurrentWidget(savedInstanceState);
-        ((Button) findViewById(R.id.create_widget)).setOnClickListener(this);
-        ((Switch) findViewById(R.id.delim)).setOnClickListener(this);
+        findViewById(R.id.create_widget).setOnClickListener(this);
+        findViewById(R.id.delim).setOnClickListener(this);
         delimeLabel = ((TextView) findViewById(R.id.delimLabel));
         delime = (EditText) findViewById(R.id.delimText);
         fontSize = (EditText) findViewById(R.id.fontSize);
@@ -101,7 +101,7 @@ public class SettingsPage extends Activity implements View.OnClickListener {
         String color = selectRadio.getText().toString();
 
         SharedPreferences.Editor prefs = context.getSharedPreferences("com.koleckar.popclock.MyAppWidgetProvider", 4).edit();
-        prefs.putString("delimeter", mdelim);
+        prefs.putString("delimiter", mdelim);
         prefs.putString("color", color);
         prefs.putString("size", size);
         prefs.apply();
@@ -119,7 +119,7 @@ public class SettingsPage extends Activity implements View.OnClickListener {
             if (box.isChecked()) {
                 delimeLabel.setVisibility(View.VISIBLE);
                 delime.setVisibility(View.VISIBLE);
-                delime.setText(R.string.defaultDelimeter);
+                delime.setText(R.string.defaultDelimiter);
             } else {
                 delime.setVisibility(View.GONE);
                 delimeLabel.setVisibility(View.GONE);
