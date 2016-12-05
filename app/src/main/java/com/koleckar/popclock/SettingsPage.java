@@ -9,7 +9,6 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Switch;
 import android.widget.EditText;
 import android.widget.RemoteViews;
@@ -29,7 +28,7 @@ public class SettingsPage extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_page);
-        getIdOfCurrentWidget(savedInstanceState);
+        getIdOfCurrentWidget();
         findViewById(R.id.create_widget).setOnClickListener(this);
         findViewById(R.id.delim).setOnClickListener(this);
         delimeLabel = ((TextView) findViewById(R.id.delimLabel));
@@ -41,7 +40,7 @@ public class SettingsPage extends Activity implements View.OnClickListener {
      * Get the Id of Current Widget from the intent from the Widget or if it is
      * <span id="IL_AD9" class="IL_AD">the first time</span>
      **/
-    void getIdOfCurrentWidget(Bundle savedInstanceState) {
+    void getIdOfCurrentWidget() {
         setResult(RESULT_CANCELED);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
